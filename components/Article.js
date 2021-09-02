@@ -132,15 +132,15 @@ return artObj;
 }
 
 data.forEach((drunk) => {
-  let wow = articleMaker(drunk);
+  const wow = articleMaker(drunk);
   document.appendChild(wow);
 })
 
 // Step 4: Outside your function now, loop over the data. At each iteration you'll use your component
 // to create a div.article element and append it to the DOM inside div.articles (see index.html).
 
-  //   openButton.classList.toggle('hide-btn');
-  //   closeButton.classList.toggle('hide-btn');
+  //   article-open.classList.toggle('article');
+  //   article-closed.classList.toggle('hide-btn');
   //   panelContent.classList.toggle('toggle-on');
   // })
   // Step 2: Still inside `articleMaker`, add an event listener to the span.expandButton.

@@ -31,3 +31,14 @@ let menuItems = [
 
   Step 6: Use 'menuMaker' to create a menu using the 'menuItems' array, and append the returned menu to the header.
 */
+function menuMaker([
+  
+])
+
+{/* <div class="menu">
+<ul>
+  {each menu item as an <li>}
+</ul>
+</div>
+
+The 'menuMaker' takes an array of menu items as its only argument. */}
