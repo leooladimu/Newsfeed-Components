@@ -25,6 +25,16 @@ let menuItems = [
 
 //   Step 3: Still inside your function, select from the DOM the menu button (the element with a class of 'menu-button').
 
+const fuckingPlastered = document.querySelector('menu-button');
+
+const fuckingPlastered = [
+  { imageURL: './assets/menu.png' }
+]
+fuckingPlastered.forEach(imgObj => {
+  const imgElement = makeImage(imgObj);
+  document.body.prepend(imgElement);
+})
+
 //   Step 4: Add a click event listener to the menu button. When clicked it should toggle the class 'menu--open' on div.menu (your div with a 'menu' class).
 
 //   Step 5: Don't forget to return your div.menu.
@@ -32,13 +42,34 @@ let menuItems = [
 //   Step 6: Use 'menuMaker' to create a menu using the 'menuItems' array, and append the returned menu to the header.
 // */
 
+// const menuMaker = menuItems.map(item => {
+//   return makeMenu(item);
+// })
+
 function menuMaker(menuItems) {
+
   const menu = document.createElement('div');
   const unli = document.createElement('ul');
-  const students = document.createElement('li');
-  const faculty = document.createElement('li');
-  const whatsNew = document.createElement('li');
-  const techTrends = document.createElement('li');
-  const music = document.createElement('li');
-  const logOut = document.createElement('li');
+  menuItems.forEach(item => {
+    item.document.createElement('li');
+  })
+  // const students = document.createElement('li');
+  // const faculty = document.createElement('li');
+  // const whatsNew = document.createElement('li');
+  // const techTrends = document.createElement('li');
+  // const music = document.createElement('li');
+  // const logOut = document.createElement('li');
+
+  for (let i = 0; i < menuItems.length; i++) {
+    const listItem = menuItems[i];
+    listItem.appendChild(unli);
+  }
+  const fuckingPlastered = document.querySelector('menu-button');
+
+  fuckingPlastered.addEventListener('click', () => {
+    menu.classList.toggle('menu--open');
+  
+  })
+
+  return menu
 }
