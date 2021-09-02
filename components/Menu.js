@@ -64,9 +64,9 @@ function menuMaker(menuItems) {
     const listItem = menuItems[i];
     listItem.appendChild(unli);
   }
-  const fuckingPlastered = document.querySelector('menu-button');
+  const xx = document.querySelector('menu-button');
 
-  fuckingPlastered.addEventListener('click', () => {
+  xx.addEventListener('click', () => {
     menu.classList.toggle('menu--open');
   
   })
