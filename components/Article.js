@@ -97,9 +97,7 @@ const data = [
   <div class="article">
     <h2>{title of the article}</h2>
     <p class="date">{date of the article}</p>
-
     {three separate paragraph elements}
-
     <span class="expandButton">+</span>
   </div>
   
@@ -116,12 +114,34 @@ const data = [
 */
 
 function articleMaker(artObj) {
-  const art = document.createElement('div');
+  const article = document.createElement('div');
   const h2 = document.createElement('h2');
   const date = document.createElement('p');
-  const p1 = document.createElement('firstParagraph');
-  const p2 = document.createElement('secondParagraph');
-  const p3 = document.createElement('thirdParagraph');
-  const btn = document.createElement('span');
-  
+  const p1st = document.createElement('firstParagraph');
+  const p2nd = document.createElement('secondParagraph');
+  const p3rd = document.createElement('thirdParagraph');
+  const expBtn = document.createElement('span');
+
+  expBtn.addEventListener('click', () => {
+    let open = document.getElementById('article');
+    open.classList.toggle('article');
+  })
+
+return artObj;
+
 }
+
+data.forEach((drunk) => {
+  let wow = articleMaker(drunk);
+  document.appendChild(wow);
+})
+
+// Step 4: Outside your function now, loop over the data. At each iteration you'll use your component
+// to create a div.article element and append it to the DOM inside div.articles (see index.html).
+
+  //   openButton.classList.toggle('hide-btn');
+  //   closeButton.classList.toggle('hide-btn');
+  //   panelContent.classList.toggle('toggle-on');
+  // })
+  // Step 2: Still inside `articleMaker`, add an event listener to the span.expandButton.
+  // This listener should toggle the class 'article-open' on div.article.
